@@ -210,7 +210,7 @@ cnoremap <C-k> <t_ku>
 inoremap jk <esc>
 
 " no wrap for text
-set nowrap 
+" set nowrap 
 
 " set textwidth for python
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=79
