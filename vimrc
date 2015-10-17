@@ -211,3 +211,18 @@ inoremap jk <esc>
 
 " no wrap for text
 set nowrap 
+
+" set textwidth for python
+autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=79
+
+" Turn on wild menu
+set wildmenu
+
+" Don't redraw while executing macros (good performance config)
+set lazyredraw
+
+" toggle on paste mode
+nnoremap <leader>pp :set paste!<CR>
+
+" fast saving
+nnoremap <leader>w :w!<CR>
