@@ -226,3 +226,5 @@ nnoremap <leader>pp :set paste!<CR>
 
 " fast saving
 nnoremap <leader>w :w!<CR>
+
+set so=7
