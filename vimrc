@@ -171,10 +171,12 @@ endfunc
 
 
 " set for solarized colorscheme
-set background=light
 colorscheme solarized
-let t_Co=256
-
+set background=dark
+let g:solarized_termcolors=256
+let g:solarized_termtrans=1
+let g:solarized_contrast="normal"
+let g:solarized_visibility="normal"
 
 " setting for relative number in normal mode
 set relativenumber number
