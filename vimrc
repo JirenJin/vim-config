@@ -171,12 +171,13 @@ endfunc
 
 
 " set for solarized colorscheme
+if has('gui_running')
+    set background=dark
+else
+    set background=light
+endif
 colorscheme solarized
-set background=dark
-let g:solarized_termcolors=256
-let g:solarized_termtrans=1
-let g:solarized_contrast="normal"
-let g:solarized_visibility="normal"
+
 
 " setting for relative number in normal mode
 set relativenumber number
@@ -230,3 +231,26 @@ nnoremap <leader>pp :set paste!<CR>
 nnoremap <leader>w :w!<CR>
 
 set so=7
+
+" Tell vim to remember certain things when we exit
+"  '10  :  marks will be remembered for up to 10 previously edited files
+"  "100 :  will save up to 100 lines for each register
+"  :20  :  up to 20 lines of command-line history will be remembered
+"  %    :  saves and restores the buffer list
+"  n... :  where to save the viminfo files
+set viminfo='10,\"100,:20,%,n~/.viminfo
+function! ResCur()
+  if line("'\"") <= line("$")
+    normal! g`"
+    return 1
+  endif
+endfunction
+
+augroup resCur
+  autocmd!
+  autocmd BufWinEnter * call ResCur()
+augroup END
+
+set undofile                 "turn on the feature  
+set undodir=$HOME/.vim/undo  "directory where the undo files will be stored
+
