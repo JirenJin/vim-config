@@ -23,7 +23,7 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'hdima/python-syntax'
 
 " solarized color-scheme
-Plugin 'altercation/vim-colors-solarized'
+" Plugin 'altercation/vim-colors-solarized'
 
 
 
@@ -170,13 +170,6 @@ function! AutoSetFileHead()
 endfunc
 
 
-" set for solarized colorscheme
-if has('gui_running')
-    set background=dark
-else
-    set background=light
-endif
-colorscheme solarized
 
 
 " setting for relative number in normal mode
