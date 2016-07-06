@@ -23,7 +23,11 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'hdima/python-syntax'
 
 " solarized color-scheme
-" Plugin 'altercation/vim-colors-solarized'
+Plugin 'altercation/vim-colors-solarized'
+
+" syntax highlighting for markdown
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 
 
 
@@ -125,8 +129,6 @@ set ttyfast
 set wildmode=list:longest
 
 
-
-
 " setting for Syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -168,8 +170,6 @@ function! AutoSetFileHead()
     normal o
     normal o
 endfunc
-
-
 
 
 " setting for relative number in normal mode
@@ -215,7 +215,7 @@ autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=
 set wildmenu
 
 " Don't redraw while executing macros (good performance config)
-set lazyredraw
+" set lazyredraw
 
 " toggle on paste mode
 nnoremap <leader>pp :set paste!<CR>
@@ -247,3 +247,7 @@ augroup END
 set undofile                 "turn on the feature  
 set undodir=$HOME/.vim/undo  "directory where the undo files will be stored
 
+
+" set for solarized colorscheme
+set background=dark
+colorscheme solarized
