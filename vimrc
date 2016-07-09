@@ -29,6 +29,14 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 
+" high-speed vim for html and css
+Plugin 'mattn/emmet-vim'
+
+" highlight for css3 and html
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'othree/html5.vim'
+
+
 
 
 " The following are examples of different formats supported.
@@ -147,6 +155,7 @@ set wildignore=*.o,*~,*.pyc,*.class
 " close preview when leaving Insert mode
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
+let g:ycm_path_to_python_interpreter="/home/jin/.pyenv/shims/python"
 let g:ycm_confirm_extra_conf=0
 let g:ycm_collect_identifiers_from_tags_files=1
 let g:ycm_min_num_of_chars_for_completion=2
@@ -158,18 +167,6 @@ let g:ycm_collect_identifiers_from_comments_and_strings = 0
 
 " python file setting
 autocmd FileType python set tabstop=4 shiftwidth=4 expandtab ai
-
-autocmd BufNewFile *.sh,*.py exec ":call AutoSetFileHead()"
-function! AutoSetFileHead()
-    if &filetype == 'python'
-        call setline(1, "\#!/usr/bin/env python")
-        call append(1, "\# -*- coding:utf-8 -*-")
-    endif
-
-    normal G
-    normal o
-    normal o
-endfunc
 
 
 " setting for relative number in normal mode
