@@ -248,3 +248,6 @@ set undodir=$HOME/.vim/undo  "directory where the undo files will be stored
 " set for solarized colorscheme
 set background=dark
 colorscheme solarized
+
+" show the cursor's current line 
+set cursorline
