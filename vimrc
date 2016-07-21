@@ -169,6 +169,8 @@ set shiftround
 " toggle spell checking
 nnoremap <leader>s :set spell!<CR>
 
+" make . usable in visual mode
+vnoremap . :norm.<CR>
 
 set ttyfast
 
