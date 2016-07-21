@@ -123,7 +123,7 @@ set number
 " line of a window
 set ruler
 
-" show the cursor's current line 
+" show the cursor's current line
 set cursorline
 
 set statusline=%<%f\ %h%m%r%=%k[%{(&fenc==\"\")?&enc:&fenc}%{(&bomb?\",BOM\":\"\")}]\ %-14.(%l,%c%V%)\ %P
@@ -241,7 +241,7 @@ cnoremap <C-k> <t_ku>
 inoremap jk <esc>
 
 " no wrap for text
-" set nowrap 
+" set nowrap
 
 " set textwidth for python
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=79
@@ -277,7 +277,7 @@ augroup resCur
   autocmd BufWinEnter * call ResCur()
 augroup END
 
-set undofile                 "turn on the feature  
+set undofile                 "turn on the feature
 set undodir=$HOME/.vim/undo  "directory where the undo files will be stored
 
 
