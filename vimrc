@@ -166,6 +166,9 @@ set expandtab
 set smarttab
 set shiftround
 
+" toggle spell checking
+nnoremap <leader>s :set spell!<CR>
+
 
 set ttyfast
 
