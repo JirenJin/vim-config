@@ -71,8 +71,7 @@ filetype plugin indent on    " required
 
 
 " set leader key
-let g:mapleader=','
-let mapleader=','
+map <space> <leader>
 
 " enable syntax highlighting
 syntax on
