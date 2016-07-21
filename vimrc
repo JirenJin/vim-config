@@ -30,13 +30,12 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 
 " high-speed vim for html and css
+" I like it very much!
 Plugin 'mattn/emmet-vim'
 
 " highlight for css3 and html
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'othree/html5.vim'
-
-
 
 
 " The following are examples of different formats supported.
@@ -75,10 +74,35 @@ filetype plugin indent on    " required
 let g:mapleader=','
 let mapleader=','
 
-" open syntax highlight
+" enable syntax highlighting
 syntax on
 
-" let backspace work like other apps
+" allows you to re-use the same
+" window and switch from an unsaved buffer without saving it first. Also allows
+" you to keep an undo history for multiple files when re-using the same window
+" in this way. Note that using persistent undo also lets you undo in multiple
+" files even in the same window, but is less efficient and is actually designed
+" for keeping undo history after closing Vim entirely. Vim will complain if you
+" try to quit without saving, and swap files will keep you safe if your computer
+" crashes.
+" Note that not everyone likes working this way (with the hidden option).
+" Alternatives include using tabs or split windows instead of re-using the same
+" window as mentioned above, and/or either of the following options:
+" set confirm
+" set autowriteall
+" it seems that I do not like working this way...
+" set hidden
+
+
+
+" set encoding for new file
+set encoding=utf-8
+
+" better command-line completion
+set wildmenu
+
+" let backspace work like other apps, allow backspacing over autoindent, line
+" breaks and start of insert action
 set backspace=eol,start,indent
 
 " automatically wrap left and right
@@ -87,26 +111,37 @@ set whichwrap+=<,>,h,l,[,]
 " for easy regular-expression formula
 set magic
 
-" show command information in the last line
+" show partial commands in the last line of the screen
 set showcmd
 
 " show current vim mode
 set showmode
 
-" show row number
+" display line numbers on the left
 set number
 
+" Display the cursor position on the last line of the screen or in the status
+" line of a window
 set ruler
+
+" show the cursor's current line 
+set cursorline
 
 set statusline=%<%f\ %h%m%r%=%k[%{(&fenc==\"\")?&enc:&fenc}%{(&bomb?\",BOM\":\"\")}]\ %-14.(%l,%c%V%)\ %P
 " Always show the status line - use 2 lines for the status bar
 set laststatus=2
 
-" highlight target text
+" highlight searches
 set hlsearch
+
+" Map <C-L> (redraw screen) to also turn off search highlighting until the
+" next search
+nnoremap <C-L> :nohl<CR><C-L>
+
 " highlight when you are typing
 set incsearch
 
+" Use case insensitive search, except when using capital letters
 set ignorecase
 set smartcase
 
@@ -119,19 +154,20 @@ set foldlevel=99
 
 " set indent
 set smartindent
+
+" When opening a new line and no filetype-specific indenting is enabled, keep
+" the same indent as the line you're currently on. Useful for READMEs, etc.
 set autoindent
 
-" set tab
-set tabstop=4
+" Indentation settings for using 4 spaces instead of tabs.
+" Do not change 'tabstop' from its default value of 8 with this setup.
 set shiftwidth=4
 set softtabstop=4
-set smarttab
 set expandtab
+set smarttab
 set shiftround
 
 
-" hidden a buffer that is abandoned
-set hidden
 set ttyfast
 
 set wildmode=list:longest
@@ -184,8 +220,6 @@ function! NumberToggle()
 endfunc
 nnoremap <C-n> :call NumberToggle()<cr>
 
-" set encoding for new file
-set encoding=utf-8
 
 " set options for auto deciding encoding
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
@@ -208,8 +242,6 @@ inoremap jk <esc>
 " set textwidth for python
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=79
 
-" Turn on wild menu
-set wildmenu
 
 " Don't redraw while executing macros (good performance config)
 " set lazyredraw
@@ -249,5 +281,3 @@ set undodir=$HOME/.vim/undo  "directory where the undo files will be stored
 set background=dark
 colorscheme solarized
 
-" show the cursor's current line 
-set cursorline
