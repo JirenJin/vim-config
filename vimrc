@@ -37,6 +37,9 @@ Plugin 'mattn/emmet-vim'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'othree/html5.vim'
 
+" easily delete, change and add surroundings: parentheses, brackets, quotes
+" and tags
+Plugin 'tpope/vim-surround'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
