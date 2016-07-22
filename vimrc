@@ -13,6 +13,12 @@ Plugin 'VundleVim/Vundle.vim'
 " auto-completion
 Plugin 'Valloric/YouCompleteMe'
 
+" ultimate solution for snippets
+Plugin 'SirVer/ultisnips'
+
+" snippets for ultisnips
+Plugin 'honza/vim-snippets'
+
 " check syntacs
 Plugin 'scrooloose/syntastic'
 
@@ -210,6 +216,12 @@ let g:ycm_key_list_previous_completion=[]
 
 " python file setting
 autocmd FileType python set tabstop=4 shiftwidth=4 expandtab ai
+
+
+" setting for UltiSnips
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 
 " setting for relative number in normal mode
