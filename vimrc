@@ -215,7 +215,7 @@ let g:ycm_key_list_select_completion=[]
 let g:ycm_key_list_previous_completion=[]
 
 " python file setting
-autocmd FileType python set tabstop=4 shiftwidth=4 expandtab ai
+autocmd FileType python setlocal tabstop=4 shiftwidth=4 expandtab ai colorcolumn=80
 
 
 " setting for UltiSnips
