@@ -257,7 +257,7 @@ autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=
 nnoremap <leader>pp :set paste!<CR>
 
 " fast saving
-nnoremap <leader>w :w!<CR>
+nnoremap <leader>w :w<CR>
 
 set so=7
 
@@ -287,4 +287,3 @@ set undodir=$HOME/.vim/undo  "directory where the undo files will be stored
 " set for solarized colorscheme
 set background=dark
 colorscheme solarized
-
