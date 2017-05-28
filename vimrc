@@ -103,8 +103,7 @@ set foldmethod=indent
 set foldlevel=99
 
 
-" set indent
-set smartindent
+" set smartindent
 
 " When opening a new line and no filetype-specific indenting is enabled, keep
 " the same indent as the line you're currently on. Useful for READMEs, etc.
@@ -195,7 +194,7 @@ set fo-=r " Do not automatically insert a comment leader after an enter
 " set for solarized colorscheme
 set background=dark
 colorscheme solarized
-set t_Co=16
+" set t_Co=16
 
 
 """ Plugin Setting
