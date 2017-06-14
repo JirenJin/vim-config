@@ -207,6 +207,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 let g:UltiSnipsEditSplit="vertical"
 
 " Youcompletme setting
-" let g:ycm_path_to_python_interpreter="/home/jin/.pyenv/shims/python"
+"let g:ycm_path_to_python_interpreter="/jin/.pyenv/shims/python"
+let g:ycm_python_binary_path = 'python'
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
