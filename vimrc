@@ -22,6 +22,9 @@ Plugin 'honza/vim-snippets'
 " auto-completion
 Plugin 'Valloric/YouCompleteMe'
 
+" auto syntax check
+Plugin 'vim-syntastic/syntastic'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -185,11 +188,11 @@ function! NumberToggle()
 endfunc
 nnoremap <C-n> :call NumberToggle()<cr>
 
-" at least 5 lines before or after current line is shown
+" at least 7 lines before or after current line is shown
 set so=7
 
-set fo+=o " Automatically insert the current comment leader after hitting 'o' or 'O' in Normal mode.
-set fo-=r " Do not automatically insert a comment leader after an enter
+" disable automatic comment insertion
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " set for solarized colorscheme
 set background=dark
@@ -212,3 +215,13 @@ let g:ycm_python_binary_path = 'python'
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:ycm_autoclose_preview_window_after_completion = 1
+
+" Syntastic setting
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
