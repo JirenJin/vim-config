@@ -13,10 +13,10 @@ Plugin 'VundleVim/Vundle.vim'
 " solarized color-scheme
 Plugin 'altercation/vim-colors-solarized'
 
-" Track the engine.
+" track the engine.
 Plugin 'SirVer/ultisnips'
 
-" Snippets are separated from the engine. Add this if you want them:
+" snippets are separated from the engine. Add this if you want them:
 Plugin 'honza/vim-snippets'
 
 " auto-completion
@@ -27,6 +27,9 @@ Plugin 'vim-syntastic/syntastic'
 
 " all about surroundings
 Plugin 'tpope/vim-surround'
+
+" complementary pairs of mappings
+Plugin 'tpope/vim-unimpaired'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
