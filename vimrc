@@ -25,6 +25,9 @@ Plugin 'Valloric/YouCompleteMe'
 " auto syntax check
 Plugin 'vim-syntastic/syntastic'
 
+" all about surroundings
+Plugin 'tpope/vim-surround'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
