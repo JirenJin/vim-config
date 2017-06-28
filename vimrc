@@ -200,6 +200,9 @@ set so=7
 " disable automatic comment insertion
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
+" automatically remove trailing spaces
+autocmd FileType c,cpp,java,php,python autocmd BufWritePre <buffer> %s/\s\+$//e
+
 " set for solarized colorscheme
 set background=dark
 colorscheme solarized
