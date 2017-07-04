@@ -3,7 +3,8 @@ viminfo
 # Plugins
 bundle/**
 # undo history
-undo/**
+undo/*
+!undo/.gitkeep
 # swap
 [._]*.s[a-w][a-z]
 [._]s[a-w][a-z]
