@@ -1,7 +1,7 @@
 # viminfo
 viminfo
 # Plugins
-bundle/**
+plugged/**
 # undo history
 undo/*
 !undo/.gitkeep
