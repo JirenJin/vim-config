@@ -22,6 +22,16 @@ Plug 'tpope/vim-surround'
 
 " complementary pairs of mappings
 Plug 'tpope/vim-unimpaired'
+
+" show a git diff in the 'gutter' (sign column)
+Plug 'airblade/vim-gitgutter'
+
+" easy toggle comments
+Plug 'scrooloose/nerdcommenter'
+
+" a tree explorer
+Plug 'scrooloose/nerdtree'
+
 call plug#end()
 """
 
@@ -204,3 +214,9 @@ let g:ycm_python_binary_path = "python"
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:ycm_autoclose_preview_window_after_completion = 1
+
+" vim-gitgutter setting
+set updatetime=100
+
+" nerdtree setting
+map <C-m> :NERDTreeToggle<CR>
